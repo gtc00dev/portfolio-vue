@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Fotografía de Producto - Maquillaje",
+    "description": "Fotografía comercial especializada en maquillaje y productos cosméticos.",
+    "image": "maquillaje/foto-maquillaje-1.jpg",
+    "category": "Belleza"
+  },
+  {
+    "id": 2,
+    "name": "Fotografía de Producto - Skincare",
+    "description": "Fotografía comercial especializada en productos para el cuidado de la piel.",
+    "image": "skincare/foto-skincare-1.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 3,
+    "name": "Editorial de Moda - Modelos",
+    "description": "Sesiones editoriales con modelos profesionales en estudio y exteriores.",
+    "image": "modelo/foto-modelo-1.jpg",
+    "category": "Moda"
+  },
+  {
+    "id": 4,
+    "name": "Fotografía de Producto - Moda",
+    "description": "Sesión enfocada en prendas, texturas, iluminación y composición visual.",
+    "image": "prenda/foto-prenda-1.jpg",
+    "category": "Ecommerce Moda"
+  }
+]

@@ -1,0 +1,332 @@
+/* ================================================================= */
+/*                           PALETA COLORES                          */
+/* ================================================================= */
+
+:root {
+    --text-h1: #282a3a;
+    --text-h2: #404252;
+    --text-h3: #5b5d6b;
+    --text-p: #9496a1;
+
+    --white: #ffffff;
+    --gray-light: #f3f4f6;
+    --gray: #c6c7ce;
+
+    --pink-lightest: #f1e5e9;
+    --pink-light: #f3d3dd;
+    --pink-medium: #ed7bab;
+    --pink: #e42278;
+    --pink-dark: #d13774;
+
+    --radius: 8px;
+
+    /* Shadow */
+    --shadow: 5px 5px 10px rgba(199, 200, 206, 0.6);
+}
+
+/* Font family */
+$font-primary: 'Lato', Helvetica, sans-serif;
+
+/* Jerarquias */
+$font-size-h1: 24px;
+$font-size-h2: 20px;
+$font-size-h3: 18px;
+$font-size-p: 14px;
+
+/* Pesos */
+$font-weight-black: 900;
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+/* Altura linea */
+$line-height-base: 1.5;
+
+/* Colores */
+
+$color-bg-body: var(--gray-light);
+$color-text-p: var(--text-p);
+$color-text-h1: var(--text-h1);
+$color-text-h2: var(--text-h2);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $color-bg-body;
+    line-height: $line-height-base;
+    color: $color-text-p;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-black;
+    color: $color-text-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    color: $color-text-h2;
+}
+
+p {
+    font-size: $font-size-p;
+    font-weight: $font-weight-regular;
+}
+
+/* ================================================================= */
+/*                              HEADER                               */
+/* ================================================================= */
+
+.main-header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Marca */
+
+.brand {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    color: var(--pink);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.tagline {
+    font-size: 14px;
+    color: var(--text-h3);
+    margin: 0;
+}
+
+/* Hover logo */
+
+.brand:hover .logo {
+    color: var(--pink-dark);
+}
+
+/* Icono mail */
+
+.mail-icon {
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-h3);
+
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.mail-icon:hover {
+    color: var(--pink-dark);
+    transform: scale(1.15);
+}
+
+.mail-icon:active {
+    transform: scale(0.95);
+}
+
+/* ================================================================= */
+/*                           GALLERY GRID                            */
+/* ================================================================= */
+
+.gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow);
+}
+
+.fade-img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-img[loading="lazy"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================================================= */
+/*                         POSTS RECIENTES                           */
+/* ================================================================= */
+
+.posts-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--pink-dark);
+    margin-top: 40px;
+    padding-bottom: 32px;
+}
+
+.inspo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.inspo-item {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inspo-item img {
+    width: 100%;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+}
+
+.posts-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-h1);
+    margin-top: 40px;
+}
+
+.inspo-item h3 {
+    font-weight: 700;
+    color: var(--text-h1);
+}
+
+.inspo-item p {
+    color: var(--text-h2);
+}
+
+/* ======================================================== */
+/*                         FOOTER                           */
+/* ======================================================== */
+
+.main-footer {
+    background-color: var(--pink-lightest);
+    padding: 48px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.main-footer p {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--text-p);
+  font-size: 14px;
+  margin: 0;
+}
+
+.main-footer .logo a {
+  text-decoration: none;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--text-h1);
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons .material-icons-outlined {
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-h3);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-icons .material-icons-outlined:hover {
+  color: var(--pink-dark);
+  transform: scale(1.15);
+}
+
+.social-icons .material-icons-outlined:active {
+  color: var(--pink);
+  transform: scale(0.95);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ======================================================== */
+/*                    BOTÓN PROYECTO                        */
+/* ======================================================== */
+
+.project-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--pink-light);
+    color: var(--text-h2);
+
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.project-btn:hover {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.project-btn:active {
+    background-color: var(--pink);
+    color: var(--white);
+    transform: scale(0.95);
+}
