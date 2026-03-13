@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from "vue-router";
-import { useGtag } from "vue-gtag";
+import { useGtag } from "vue-gtag-next";
 import { onMounted, ref } from "vue";
 import projects from "@/assets/projects.json";
 
